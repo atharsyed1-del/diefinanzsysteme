@@ -36,7 +36,7 @@ export function VideoSection() {
         <div className="group relative aspect-[9/16] overflow-hidden rounded-2xl border border-border bg-card shadow-lg shadow-primary/5 ring-1 ring-foreground/5 dark:shadow-black/40">
           <video
             ref={videoRef}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
             src="/videos/intro.mp4"
             controls={playing}
             playsInline
