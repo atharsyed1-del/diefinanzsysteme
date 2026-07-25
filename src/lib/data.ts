@@ -92,6 +92,8 @@ export type Article = {
   readTime: string;
   date: string;
   featured?: boolean;
+  source: string;
+  href: string;
 };
 
 export const articles: Article[] = [
@@ -103,6 +105,8 @@ export const articles: Article[] = [
     readTime: "9 min read",
     date: "Jul 2026",
     featured: true,
+    source: "Reuters",
+    href: "https://www.reuters.com/business/finance/",
   },
   {
     title: "Inside the Eurozone's Banking Union",
@@ -111,6 +115,8 @@ export const articles: Article[] = [
     category: "Banking Systems",
     readTime: "7 min read",
     date: "Jul 2026",
+    source: "Financial Times",
+    href: "https://www.ft.com/central-banks",
   },
   {
     title: "Sukuk vs. Bonds: Structuring Islamic Debt",
@@ -119,6 +125,8 @@ export const articles: Article[] = [
     category: "Islamic Finance",
     readTime: "6 min read",
     date: "Jun 2026",
+    source: "Reuters",
+    href: "https://www.reuters.com/world/middle-east/",
   },
   {
     title: "China's Digital Yuan and the Future of Settlement",
@@ -127,6 +135,8 @@ export const articles: Article[] = [
     category: "Digital Currency",
     readTime: "8 min read",
     date: "Jun 2026",
+    source: "Reuters",
+    href: "https://www.reuters.com/markets/asia/",
   },
   {
     title: "Singapore's Playbook for FinTech Regulation",
@@ -135,6 +145,8 @@ export const articles: Article[] = [
     category: "FinTech",
     readTime: "5 min read",
     date: "May 2026",
+    source: "The Business Times",
+    href: "https://www.businesstimes.com.sg/",
   },
   {
     title: "Carbon Pricing and the Rise of Green Capital",
@@ -143,6 +155,8 @@ export const articles: Article[] = [
     category: "Sustainable Finance",
     readTime: "7 min read",
     date: "May 2026",
+    source: "Reuters",
+    href: "https://www.reuters.com/sustainability/",
   },
 ];
 

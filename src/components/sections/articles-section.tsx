@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Clock } from "lucide-react";
 
 import { Reveal } from "@/components/reveal";
 import { Badge } from "@/components/ui/badge";
@@ -35,7 +35,9 @@ export function ArticlesSection() {
           {articles.map((article, i) => (
             <Reveal key={article.title} delay={(i % 3) * 100}>
               <Link
-                href="#"
+                href={article.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={cn(
                   "group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-lg hover:shadow-gold/5",
                   article.featured && "sm:col-span-2 lg:col-span-1"
@@ -51,13 +53,18 @@ export function ArticlesSection() {
                   </Badge>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-heading text-lg font-semibold text-foreground transition-colors group-hover:text-gold">
-                    {article.title}
+                  <h3 className="flex items-start gap-1.5 font-heading text-lg font-semibold text-foreground transition-colors group-hover:text-gold">
+                    <span className="flex-1">{article.title}</span>
+                    <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted-foreground/50 opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-gold group-hover:opacity-100" />
                   </h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
                     {article.excerpt}
                   </p>
                   <div className="mt-5 flex items-center gap-3 text-xs text-muted-foreground">
+                    <span className="font-medium text-foreground/70">
+                      via {article.source}
+                    </span>
+                    <span aria-hidden="true">&middot;</span>
                     <span>{article.date}</span>
                     <span aria-hidden="true">&middot;</span>
                     <span className="inline-flex items-center gap-1">
