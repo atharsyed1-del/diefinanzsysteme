@@ -32,8 +32,8 @@ export function VideoSection() {
         </p>
       </Reveal>
 
-      <Reveal delay={150} className="mx-auto mt-12 max-w-4xl">
-        <div className="group relative aspect-video overflow-hidden rounded-2xl border border-border bg-card shadow-lg shadow-primary/5 ring-1 ring-foreground/5 dark:shadow-black/40">
+      <Reveal delay={150} className="mx-auto mt-12 max-w-xs sm:max-w-sm">
+        <div className="group relative aspect-[9/16] overflow-hidden rounded-2xl border border-border bg-card shadow-lg shadow-primary/5 ring-1 ring-foreground/5 dark:shadow-black/40">
           <video
             ref={videoRef}
             className="h-full w-full object-cover"
