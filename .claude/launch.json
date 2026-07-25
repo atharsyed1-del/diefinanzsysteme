@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "diefinanzsysteme-dev",
+      "runtimeExecutable": "C:\\Users\\athar\\OneDrive\\Desktop\\diefinanzsysteme\\.claude\\start-dev.cmd",
+      "runtimeArgs": [],
+      "port": 3000
+    }
+  ]
+}
