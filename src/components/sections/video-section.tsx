@@ -1,9 +1,12 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { Play } from "lucide-react";
 
+import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { Reveal } from "@/components/reveal";
+import { instagramReels } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function VideoSection() {
@@ -62,6 +65,32 @@ export function VideoSection() {
               </span>
             </button>
           )}
+        </div>
+      </Reveal>
+
+      <Reveal delay={250} className="mx-auto mt-12 max-w-3xl">
+        <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          More on Instagram
+        </p>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {instagramReels.map((reel) => (
+            <Link
+              key={reel.href}
+              href={reel.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex aspect-[9/16] flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border border-border bg-gradient-to-br from-primary to-primary/70 p-3 text-center transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 dark:from-navy dark:to-card"
+            >
+              <div className="bg-grid absolute inset-0 opacity-20" />
+              <span className="relative flex size-9 items-center justify-center rounded-full bg-primary-foreground/10 text-primary-foreground transition-transform duration-300 group-hover:scale-110 dark:text-gold">
+                <Play className="ml-0.5 size-4 fill-current" />
+              </span>
+              <span className="relative text-xs font-medium leading-snug text-primary-foreground dark:text-foreground">
+                {reel.title}
+              </span>
+              <InstagramIcon className="relative size-3.5 text-primary-foreground/60 dark:text-muted-foreground" />
+            </Link>
+          ))}
         </div>
       </Reveal>
     </section>

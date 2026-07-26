@@ -160,6 +160,30 @@ export const articles: Article[] = [
   },
 ];
 
+export type InstagramReel = {
+  title: string;
+  href: string;
+};
+
+export const instagramReels: InstagramReel[] = [
+  {
+    title: "Indian Financial System — Part 1",
+    href: "https://www.instagram.com/diefinanzsysteme/reel/DbP2judtdmM/",
+  },
+  {
+    title: "Indian Financial System — Part 2",
+    href: "https://www.instagram.com/diefinanzsysteme/reel/DbQI4r5txg3/",
+  },
+  {
+    title: "Indian Financial System — Part 3",
+    href: "https://www.instagram.com/diefinanzsysteme/reel/DbQWLDttrpK/",
+  },
+  {
+    title: "Watch on Instagram",
+    href: "https://www.instagram.com/diefinanzsysteme/reel/DbNSyY5tzbQ/",
+  },
+];
+
 export type CountrySnapshot = {
   name: string;
   flag: string;
