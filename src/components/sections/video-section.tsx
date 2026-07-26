@@ -68,11 +68,11 @@ export function VideoSection() {
         </div>
       </Reveal>
 
-      <Reveal delay={250} className="mx-auto mt-12 max-w-3xl">
+      <Reveal delay={250} className="mx-auto mt-12 max-w-2xl">
         <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
           More on Instagram
         </p>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="grid grid-cols-3 gap-3">
           {instagramReels.map((reel) => (
             <Link
               key={reel.href}

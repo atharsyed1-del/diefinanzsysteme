@@ -178,10 +178,6 @@ export const instagramReels: InstagramReel[] = [
     title: "Indian Financial System — Part 3",
     href: "https://www.instagram.com/diefinanzsysteme/reel/DbQWLDttrpK/",
   },
-  {
-    title: "Watch on Instagram",
-    href: "https://www.instagram.com/diefinanzsysteme/reel/DbNSyY5tzbQ/",
-  },
 ];
 
 export type CountrySnapshot = {
