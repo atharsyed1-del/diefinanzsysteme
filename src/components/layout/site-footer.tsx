@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Mail, Rss, MessageCircle, Send } from "lucide-react";
+import { Mail, Rss, MessageCircle } from "lucide-react";
 
+import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { Logo } from "@/components/logo";
 import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/config/site";
@@ -36,10 +37,14 @@ const footerColumns = [
 ];
 
 const socials = [
-  { icon: Send, label: "Telegram" },
-  { icon: MessageCircle, label: "Discussion" },
-  { icon: Rss, label: "RSS feed" },
-  { icon: Mail, label: "Email" },
+  {
+    icon: InstagramIcon,
+    label: "Instagram",
+    href: "https://www.instagram.com/diefinanzsysteme/",
+  },
+  { icon: MessageCircle, label: "Discussion", href: "#" },
+  { icon: Rss, label: "RSS feed", href: "#" },
+  { icon: Mail, label: "Email", href: "#" },
 ];
 
 export function SiteFooter() {
@@ -61,7 +66,9 @@ export function SiteFooter() {
               {socials.map((social) => (
                 <Link
                   key={social.label}
-                  href="#"
+                  href={social.href}
+                  target={social.href.startsWith("http") ? "_blank" : undefined}
+                  rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   aria-label={social.label}
                   className="flex size-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold/50 hover:text-gold"
                 >
